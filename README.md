@@ -1,4 +1,4 @@
-# dbus-kotsal Service
+# dbus-kostal Service
 
 ### Purpose
 
