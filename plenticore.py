@@ -798,6 +798,9 @@ class kostal_modbusquery:
             dbusservice['pvinverter.pv0']['/Ac/L2/Power'] = self.Adr162[3]
             dbusservice['pvinverter.pv0']['/Ac/L3/Power'] = self.Adr168[3]
             
+            
+            dbusservice['pvinverter.pv0']['/Ac/Energy/Forward'] = self.Adr320[3]
+            
             dbusservice['pvinverter.pv0']['/Ac/Power'] = self.Adr172[3]
            
     except Exception as ex:
