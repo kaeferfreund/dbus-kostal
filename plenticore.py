@@ -800,6 +800,9 @@ class kostal_modbusquery:
             
             
             dbusservice['pvinverter.pv0']['/Ac/Energy/Forward'] = self.Adr320[3]/1000.0
+            dbusservice['pvinverter.pv0']['/Ac/L1/Energy/Forward'] = self.Adr320[3]/3000.0
+            dbusservice['pvinverter.pv0']['/Ac/L2/Energy/Forward'] = self.Adr320[3]/3000.0
+            dbusservice['pvinverter.pv0']['/Ac/L3/Energy/Forward'] = self.Adr320[3]/3000.0
             
             dbusservice['pvinverter.pv0']['/Ac/Power'] = self.Adr172[3]
            
@@ -859,6 +862,9 @@ def new_service(base, type, physical, id, instance):
         self.add_path(
             '/ProductName', "Kostal")
         self.add_path('/Ac/Energy/Forward', None, gettextcallback=_kwh)
+        self.add_path('/Ac/L1/Energy/Forward', None, gettextcallback=_kwh)
+        self.add_path('/Ac/L2/Energy/Forward', None, gettextcallback=_kwh)
+        self.add_path('/Ac/L3/Energy/Forward', None, gettextcallback=_kwh)
         self.add_path('/Ac/Power', None, gettextcallback=_w)
         self.add_path('/Ac/L1/Current', None, gettextcallback=_a)
         self.add_path('/Ac/L2/Current', None, gettextcallback=_a)
