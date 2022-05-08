@@ -782,7 +782,7 @@ class kostal_modbusquery:
             dbusservice['grid']['/Ac/L2/Power'] = self.Adr234[3]
             dbusservice['grid']['/Ac/L3/Power'] = self.Adr244[3]
             
-            dbusservice['grid']['/Ac/Energy/Forward'] = self.Adr112[3] 
+            dbusservice['grid']['/Ac/Energy/Forward'] = self.Adr112[3]/1000.0
             
             #pv inverter          
             
@@ -799,7 +799,7 @@ class kostal_modbusquery:
             dbusservice['pvinverter.pv0']['/Ac/L3/Power'] = self.Adr168[3]
             
             
-            dbusservice['pvinverter.pv0']['/Ac/Energy/Forward'] = self.Adr320[3]
+            dbusservice['pvinverter.pv0']['/Ac/Energy/Forward'] = self.Adr320[3]/1000.0
             
             dbusservice['pvinverter.pv0']['/Ac/Power'] = self.Adr172[3]
            
